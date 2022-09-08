@@ -52,6 +52,15 @@ resource "aws_instance" "dev7" {
   depends_on = [aws_dynamodb_table.dynamodb-homolog]
 }
 
+# resource "aws_s3_bucket" "homolog" {
+#   bucket = "homolog"
+#   acl = "private"
+
+#   tags = {
+#     "Name" = "myselfrock-homolog"
+#   }
+# }
+
 # resource "aws_s3_bucket_acl" "s3_bucket_acl" {
 #   bucket = aws_s3_bucket.dev4.id
 #   acl    = "private"
